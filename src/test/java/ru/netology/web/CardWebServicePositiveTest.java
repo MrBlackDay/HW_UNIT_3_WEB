@@ -29,7 +29,7 @@ public class CardWebServicePositiveTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
-        driver.get("http://0.0.0.0:9999");
+        driver.get("http://localhost:9999");
     }
 
 
@@ -41,7 +41,6 @@ public class CardWebServicePositiveTest {
 
     @Test
     void shouldBeSuccess() {
-        driver.get(" http://0.0.0.0:9999");
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иван");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990123456");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
